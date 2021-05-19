@@ -91,6 +91,7 @@ body {
 }
 
 .boton {
+  color: #810000;
   height: 50%;
   width: 100%;
   display: -webkit-box;
@@ -106,6 +107,15 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+div.button {
+  width: 80px;
+  height: 80px;
+  color: #810000;
+  border-radius: 40px;
+  background-color: black;
+  border: 2px solid yellowgreen;
 }
 
 .respuesta {
