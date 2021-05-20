@@ -14,7 +14,7 @@
 @mixin movimiento{
     position: relative;
     animation-name: animacion;
-    animation-duration: 20s;
+    animation-duration: 10s;
     animation-direction: normal;
     animation-iteration-count: infinite;
 }
@@ -22,7 +22,7 @@
 body{
     height: 100vh;
     width: 100vw;
-}
+    cursor: url(../../img/fist.png), pointer;
 
     .contenedor{
         height: 100%;
@@ -69,8 +69,8 @@ body{
                     @include diana (50px,50px,25px,#cf0000);
                 }
 
-        @keyframes animacion{
-            0% {left: 50vw; top: calc(0vh - 150px); animation-timing-function: ease-in;}
-            100% {left: 50vw; top: calc(100vh - 170px); animation-timing-function: ease-in;}
-        }       
+                @keyframes animacion{
+                    0% {left: 50vw; top: calc(0vh - 150px); animation-timing-function: ease-in;}
+                    100% {left: 50vw; top: calc(100vh - 170px); animation-timing-function: ease-in;}
+                }       
 
