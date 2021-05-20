@@ -1,39 +1,36 @@
 @import "reset";
 
-body{
-    height: 100vh;
-    width: 100vw;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-}
-.contenedor{
-    height: 100%;
-    width: 100%;
-    background:#eeebdd;
-    border: 15px solid #810000;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-}
-.boton{
-    color: #810000;
-    height: 50%;
-    width: 100%;
+
+@mixin flexbox {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
 }
 
+body{
+    height: 100vh;
+    width: 100vw;
+    @include flexbox;
+}
+.contenedor{
+    height: 100%;
+    width: 100%;
+    background:#eeebdd;
+    border: 15px solid #810000;
+    @include flexbox;
+}
+.boton{
+    color: #810000;
+    height: 50%;
+    width: 100%;
+    @include flexbox;
+}
+
 .respuesta{
     height: 50%;
     width: 100%;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
+    @include flexbox;
 }
     .texto{
         height: 80%;
@@ -41,9 +38,6 @@ body{
         color: #810000;
         font-size: 35px;
         font-weight:bold;
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
-        align-items: center;
+        @include flexbox;
         padding-bottom: 10%;
     }
