@@ -73,6 +73,26 @@ body {
   background-position: bottom left;
 }
 
+.centrarAlert {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: nowrap;
+      flex-flow: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.alert {
+  width: 95%;
+  z-index: 100;
+  position: absolute;
+}
+
 .respuesta {
   height: 60%;
   width: 95%;
