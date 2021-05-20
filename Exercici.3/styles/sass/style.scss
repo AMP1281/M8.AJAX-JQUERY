@@ -65,6 +65,17 @@ body{
         @include fondo;
         }
 
+        .centrarAlert{
+            @include flexbox(nowrap, center, center);
+            }
+    
+            .alert {
+                width:95%;
+                z-index: 100;
+                position:absolute;
+                
+             }
+
         .respuesta{
             height: 60%;
             width: 95%;
