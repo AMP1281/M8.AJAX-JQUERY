@@ -1,5 +1,11 @@
 @import "reset";
 
+$fondo: #eeebdd;
+$borde:#810000;
+$texto: black;
+$rojod:#cf0000;
+$blancod: white;
+
 @mixin flexbox($flex-flow,$justify-content,$align-items){
     display: flex;
     flex-flow: $flex-flow;
@@ -8,7 +14,7 @@
 }
 
 @mixin fondo{
-    border: 15px solid #810000;
+    border: 15px solid $borde;
     background:#eeebdd;
     background: {        
         image: url(../../img/imgFondo.png);
@@ -20,8 +26,8 @@
 }
 
 @mixin texto{
-    color: black;
-    text-shadow: 1px 1px 4px #810000;
+    color: $texto;
+    text-shadow: 1px 1px 4px $borde;
     font: {
         family: 'Bebas Neue', cursive;
         size: 45px;
@@ -52,6 +58,7 @@ body{
     width: 100vw;
     cursor: url(../../img/fistAmarillo.png), pointer;
 }
+
     .contenedor{
         height: 100%;
         width: 100%;
@@ -63,6 +70,7 @@ body{
             width: 95%;
             @include flexbox(nowrap, flex-end, center);
         }
+
             .texto{
                 height: 100%;
                 width: 40%;
@@ -72,14 +80,14 @@ body{
             }
 
         .button1{
-            @include diana (150px,150px,75px,#cf0000);
+            @include diana (150px,150px,75px,$rojod);
             @include movimiento (animacion1,4s);
         }
             .btn1{
-                @include diana (100px,100px,50px,white);
+                @include diana (100px,100px,50px,$blancod);
             }
             .btn2{
-                @include diana (50px,50px,25px,#cf0000);
+                @include diana (50px,50px,25px,$rojod);
             }
 
             @keyframes animacion1{
@@ -88,7 +96,7 @@ body{
             }
 
         .button2{
-            @include diana (150px,150px,75px,#cf0000);
+            @include diana (150px,150px,75px,$rojod);
             @include movimiento(animacion2,5s);
         }
 
@@ -96,3 +104,24 @@ body{
                 0% {left: 30vw; top: calc(0vh - 300px); animation-timing-function: ease-in;}
                 100% {left: 30vw; top: calc(100vh - 320px); animation-timing-function: ease-out;}
             }
+
+            @media(max-width:1262px){
+                .nav-menu{
+                    height: 10%;
+                }
+                    .nav-menu li{
+                    height: 50%;
+                    }
+                .section{
+                    height: 45%;
+                }
+                    .section article{
+                    height: 100%;
+                    }
+            }
+
+@media(max-width:500px){
+    .respuesta{
+        order:1;
+    }
+}

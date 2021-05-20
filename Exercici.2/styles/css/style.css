@@ -268,4 +268,27 @@ body {
             animation-timing-function: ease-out;
   }
 }
+
+@media (max-width: 1262px) {
+  .nav-menu {
+    height: 10%;
+  }
+  .nav-menu li {
+    height: 50%;
+  }
+  .section {
+    height: 45%;
+  }
+  .section article {
+    height: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .respuesta {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
 /*# sourceMappingURL=style.css.map */
