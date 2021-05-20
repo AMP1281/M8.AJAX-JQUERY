@@ -1,75 +1,98 @@
 @import "reset";
 
-@mixin diana ($width,$height,$border-radius,$background-color){
+@mixin flexbox($flex-flow,$justify-content,$align-items){
     display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
+    flex-flow: $flex-flow;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@mixin fondo{
+    border: 15px solid #810000;
+    background:#eeebdd;
+    background: {        
+        image: url(../../img/imgFondo.png);
+        repeat: no-repeat;
+        size: contain;
+        attachment: fixed;
+        position: bottom left;
+    }
+}
+
+@mixin texto{
+    color: black;
+    text-shadow: 1px 1px 4px #810000;
+    font: {
+        family: 'Bebas Neue', cursive;
+        size: 45px;
+        weight: bold;
+    }
+}
+
+@mixin diana ($width,$height,$border-radius,$background-color){
+    @include flexbox (column wrap,center,center);
     width: $width;
     height: $height;
     border-radius: $border-radius;
     background-color: $background-color;
 }
 
-@mixin movimiento{
+@mixin movimiento($animacion, $duration){
     position: relative;
-    animation-name: animacion;
-    animation-duration: 10s;
-    animation-direction: normal;
-    animation-iteration-count: infinite;
+    animation: {
+        name: $animacion;
+        duration: $duration;
+        direction: normal;
+        iteration-count: infinite;
+    }
 }
 
 body{
     height: 100vh;
     width: 100vw;
-    cursor: url(../../img/fist.png), pointer;
-
+    cursor: url(../../img/fistAmarillo.png), pointer;
+}
     .contenedor{
         height: 100%;
         width: 100%;
-        background:#eeebdd;
-        border: 15px solid #810000;
-        background-image: url(../../img/imgFondo.png);
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-attachment: fixed;
-        background-position: bottom left;
-    }
+        @include fondo;
+        }
 
         .respuesta{
-            height: 80%;
+            height: 60%;
             width: 95%;
-            display: flex;
-            flex-flow: nowrap;
-            justify-content: flex-end;
-            align-items: center;
-
+            @include flexbox(nowrap, flex-end, center);
         }
             .texto{
                 height: 100%;
-                width: 30%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color: #810000;
-                font-size: 35px;
-                font-weight:bold;
-                padding-bottom: 10%;
+                width: 40%;
+                padding-bottom: 15%;
+                @include flexbox(nowrap, center, center);
+                @include texto;
             }
 
-                .button{
-                    @include diana (150px,150px,75px,#cf0000);
-                    @include movimiento;
-                }
-                .btn1{
-                    @include diana (100px,100px,50px,white);
-                }
-                .btn2{
-                    @include diana (50px,50px,25px,#cf0000);
-                }
+        .button1{
+            @include diana (150px,150px,75px,#cf0000);
+            @include movimiento (animacion1,4s);
+        }
+            .btn1{
+                @include diana (100px,100px,50px,white);
+            }
+            .btn2{
+                @include diana (50px,50px,25px,#cf0000);
+            }
 
-                @keyframes animacion{
-                    0% {left: 25vw; top: calc(0vh - 150px); animation-timing-function: ease-in;}
-                    100% {left: 25vw; top: calc(100vh - 170px); animation-timing-function: ease-in;}
-                }       
+            @keyframes animacion1{
+                0% {left: 10vw; top: calc(0vh - 150px); animation-timing-function: ease-in;}
+                100% {left: 10vw; top: calc(100vh - 170px); animation-timing-function: ease-out;}
+            }
 
+        .button2{
+            @include diana (150px,150px,75px,#cf0000);
+            @include movimiento(animacion2,5s);
+        }
+
+            @keyframes animacion2{
+                0% {left: 30vw; top: calc(0vh - 300px); animation-timing-function: ease-in;}
+                100% {left: 30vw; top: calc(100vh - 320px); animation-timing-function: ease-out;}
+            }

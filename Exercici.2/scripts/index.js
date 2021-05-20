@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-    $("#button").click(function(e){
+    $("#button1, #button2").click(function(e){
         e.preventDefault();
         $.getJSON("http://api.icndb.com/jokes/random", function (data) {
             $.each(data,function(index,item){

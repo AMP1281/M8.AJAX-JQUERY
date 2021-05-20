@@ -58,14 +58,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 body {
   height: 100vh;
   width: 100vw;
-  cursor: url(../../img/fistAmarillo.png), auto;
+  cursor: url(../../img/fistAmarillo.png), pointer;
 }
 
 .contenedor {
   height: 100%;
   width: 100%;
-  background: #eeebdd;
   border: 15px solid #810000;
+  background: #eeebdd;
   background-image: url(../../img/imgFondo.png);
   background-repeat: no-repeat;
   background-size: contain;
@@ -74,7 +74,7 @@ body {
 }
 
 .respuesta {
-  height: 80%;
+  height: 60%;
   width: 95%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -92,23 +92,26 @@ body {
 .texto {
   height: 100%;
   width: 40%;
+  padding-bottom: 15%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-flow: nowrap;
+      flex-flow: nowrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #810000;
-  font-size: 35px;
+  color: black;
+  text-shadow: 1px 1px 4px #810000;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 45px;
   font-weight: bold;
-  padding-bottom: 10%;
-  z-index: 100;
 }
 
-.button {
+.button1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -127,10 +130,10 @@ body {
   border-radius: 75px;
   background-color: #cf0000;
   position: relative;
-  -webkit-animation-name: animacion;
-          animation-name: animacion;
-  -webkit-animation-duration: 10s;
-          animation-duration: 10s;
+  -webkit-animation-name: animacion1;
+          animation-name: animacion1;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
   -webkit-animation-direction: normal;
           animation-direction: normal;
   -webkit-animation-iteration-count: infinite;
@@ -177,33 +180,92 @@ body {
   background-color: #cf0000;
 }
 
-@-webkit-keyframes animacion {
+@-webkit-keyframes animacion1 {
   0% {
-    left: 50vw;
+    left: 10vw;
     top: calc(0vh - 150px);
     -webkit-animation-timing-function: ease-in;
             animation-timing-function: ease-in;
   }
   100% {
-    left: 50vw;
+    left: 10vw;
     top: calc(100vh - 170px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
   }
 }
 
-@keyframes animacion {
+@keyframes animacion1 {
   0% {
-    left: 50vw;
+    left: 10vw;
     top: calc(0vh - 150px);
     -webkit-animation-timing-function: ease-in;
             animation-timing-function: ease-in;
   }
   100% {
-    left: 50vw;
+    left: 10vw;
     top: calc(100vh - 170px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+
+.button2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  background-color: #cf0000;
+  position: relative;
+  -webkit-animation-name: animacion2;
+          animation-name: animacion2;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes animacion2 {
+  0% {
+    left: 30vw;
+    top: calc(0vh - 300px);
     -webkit-animation-timing-function: ease-in;
             animation-timing-function: ease-in;
+  }
+  100% {
+    left: 30vw;
+    top: calc(100vh - 320px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+
+@keyframes animacion2 {
+  0% {
+    left: 30vw;
+    top: calc(0vh - 300px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  100% {
+    left: 30vw;
+    top: calc(100vh - 320px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
   }
 }
 /*# sourceMappingURL=style.css.map */
