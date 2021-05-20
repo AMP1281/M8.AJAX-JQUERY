@@ -68,23 +68,43 @@ body {
   background-image: url(../../img/imgFondo.png);
   background-repeat: no-repeat;
   background-size: contain;
+  background-attachment: fixed;
+  background-position: bottom left;
 }
 
 .respuesta {
   height: 80%;
-  width: 50%;
+  width: 95%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-flow: nowrap;
+      flex-flow: nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .texto {
-  height: 80%;
-  width: 80%;
+  height: 100%;
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #810000;
   font-size: 35px;
   font-weight: bold;
   padding-bottom: 10%;
+  z-index: 100;
 }
 
 .button {
