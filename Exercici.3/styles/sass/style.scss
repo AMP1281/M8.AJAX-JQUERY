@@ -1,57 +1,8 @@
 @import "reset";
+@import "variables";
+@import "mixins";
 
-$fondo: #eeebdd;
-$borde:#810000;
-$texto: black;
-$rojod:#cf0000;
-$blancod: white;
 
-@mixin flexbox($flex-flow,$justify-content,$align-items){
-    display: flex;
-    flex-flow: $flex-flow;
-    justify-content: $justify-content;
-    align-items: $align-items;
-}
-
-@mixin fondo{
-    border: 15px solid $borde;
-    background:#eeebdd;
-    background: {        
-        image: url(../../img/imgFondo.png);
-        repeat: no-repeat;
-        size: contain;
-        attachment: fixed;
-        position: bottom left;
-    }
-}
-
-@mixin texto{
-    color: $texto;
-    text-shadow: 1px 1px 4px $borde;
-    font: {
-        family: 'Bebas Neue', cursive;
-        size: 45px;
-        weight: bold;
-    }
-}
-
-@mixin diana ($width,$height,$border-radius,$background-color){
-    @include flexbox (column wrap,center,center);
-    width: $width;
-    height: $height;
-    border-radius: $border-radius;
-    background-color: $background-color;
-}
-
-@mixin movimiento($animacion, $duration){
-    position: relative;
-    animation: {
-        name: $animacion;
-        duration: $duration;
-        direction: normal;
-        iteration-count: infinite;
-    }
-}
 
 body{
     height: 100vh;
